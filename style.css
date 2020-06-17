@@ -1,0 +1,11 @@
+body{
+    background-image: url("Resources/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    }
+.img-fluid{
+    width: 1380px;
+    height: 450px;
+    }
