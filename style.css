@@ -9,3 +9,9 @@ body{
     width: 1380px;
     height: 450px;
     }
+
+.img-user, .img-admin
+{
+    width: 240px;
+    height: 220px;
+}
