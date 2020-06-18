@@ -1,5 +1,18 @@
+var registerbtn = document.getElementById('registerlink');
+var loginBtn = document.getElementById('loginlink')
+
+loginBtn.addEventListener('click', toggle)
+
+registerbtn.addEventListener('click', toggle)
+
+function toggle() {
+    var register = document.querySelector('.register-form');
+    var login = document.querySelector('.login-form')
+    register.classList.toggle('show')
+    login.classList.toggle('show')
+}
 //login form
-document.getElementById('login').addEventListener('click', function (event) {
+document.getElementById('loginbtn').addEventListener('click', function (event) {
     event.preventDefault()
     var username, password, user
     username = document.getElementById('username')
@@ -17,7 +30,7 @@ document.getElementById('login').addEventListener('click', function (event) {
         }
     }
 })
-document.getElementById('register').addEventListener('click', function (event) {
+document.getElementById('registerbtn').addEventListener('click', function (event) {
     event.preventDefault()
     var email, username, password, cnfpassword, arr,
         email = document.getElementById('email')
@@ -42,25 +55,11 @@ document.getElementById('register').addEventListener('click', function (event) {
         alert("Password and confirm password doesnt match")
     }
 })
-function clearfields(email, username, password, cnfpassword, mob, address) {
+function clearfields(email, username, password, cnfpassword) {
     email.value = ''
     username.value = ''
     password.value = ''
     cnfpassword.value = ''
-    mob.value = ''
-    address.value = ''
+
 }
 
-var registerbtn = document.getElementById('registerBtn');
-var loginBtn = document.getElementById('loginBtn')
-
-loginBtn.addEventListener('click', toggle)
-
-registerbtn.addEventListener('click', toggle)
-
-function toggle() {
-    var register = document.querySelector('.register-form');
-    var login = document.querySelector('.login-form')
-    register.classList.toggle('show')
-    login.classList.toggle('show')
-}
