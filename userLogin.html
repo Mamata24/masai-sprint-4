@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
     <link rel="icon" href="Resources/icon.jpg" type="icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="userLogin.css">
     <title>Event Management System</title>
 </head>
@@ -14,44 +15,58 @@
 <body>
     <div class="container-fluid">
         <div class="col-14 card bg-dark w-100">
-            <img class="img-fluid" src="Resources/header2.jpg" alt="Card image">
             <div class="card-img-overlay">
                 <h2 class="card-title text-center m-4 text-primary font-weight-bolder">EVENT MANAGEMENT SYSTEM</h2>
             </div>
         </div>
 
-        <!--Register Page for user-->
-        <form class="card register-page bg-info col-4 m-auto">
-            <div class="form-group">
-                <label for="exampleInputUsername" class="font-weight-bolder">Username</label>
-                <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="usernameHelp"
-                    placeholder="Enter Username">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="Enter Email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                    else.</small>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-success pl-3 pr-3 w-100">Create</button>
-            <p class="message text-center">Already Registered? <a class="text-white" href="#">Login</a></p>
-        </form>
-        <!--Login Page for user-->
-        <form class="card login-page bg-info col-4 m-auto">
-            <div class="form-group">
-                <label for="exampleInputUsername" class="font-weight-bolder">Username</label>
-                <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="usernameHelp"
-                    placeholder="Enter Username">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-success pl-3 pr-3 w-100">Login</button>
-            <p class="message text-center">Not Registered? <a class="text-white" href="#">Register</a></p>
-        </form>
+        <div class="form mb-3">
+
+            <!--Login Page for user-->
+            <form class="card show login-form bg-dark col-4 m-auto p-2" id="login">
+                <div class="form-group">
+                    <label for="exampleInputUsername" class="font-weight-bolder">Username</label>
+                    <input type="text" class="form-control" id="username" aria-describedby="usernameHelp"
+                        placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class="font-weight-bolder">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-success pl-3 pr-3 w-100">Login</button>
+                <p class="message text-center">Not Registered? <a href="#" id="registerBtn">Register</a></p>
+            </form>
+
+            <!--Register Page for user-->
+            <form class="card register-form bg-dark col-4 m-auto p-2" id="register">
+                <div class="form-group">
+                    <label for="exampleInputUsername" class="font-weight-bolder">Username</label>
+                    <input type="text" class="form-control" id="username" aria-describedby="usernameHelp"
+                        placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="font-weight-bolder">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                        placeholder="Enter Email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class="font-weight-bolder">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class="font-weight-bolder">Password</label>
+                    <input type="password" class="form-control" id="cnfpassword" placeholder="Confirm Password">
+                </div>
+                <button type="submit" class="btn btn-success pl-3 pr-3 w-100">Create</button>
+                <p class="message text-center">Already Registered? <a href="#" id="loginBtn">Login</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="userLogin.js"></script>
+    <script src="userRegister.js"></script>
+
+</body>
+
+</html>
