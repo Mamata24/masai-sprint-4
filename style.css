@@ -15,3 +15,7 @@ body{
     width: 240px;
     height: 220px;
 }
+
+.needs-validation{
+    display:none;
+}
