@@ -18,18 +18,103 @@
             <div class="card-img-overlay">
                 <h2 class="card-title text-center m-4 text-primary font-weight-bolder">EVENT MANAGEMENT SYSTEM</h2>
                 <div class="row m-3">
-                    <a class="btn btn-outline-primary m-3 " href="details.html" role="button">My Details</a>
-                    <a class="btn btn-outline-primary ml-5 mr-3 mt-3 mb-3" href="book_events.html" role="button">Book
-                        Events</a>
+                    <button type="button" class="btn btn-outline-primary m-3 " role="button" id="detailsbtn">My
+                        Details</button>
+                    <button class="btn btn-outline-primary ml-5 mr-3 mt-3 mb-3" role="button" id="bookingbtn">Book
+                        Events</button>
                     <a class="btn btn-outline-primary ml-5 mr-3 mt-3 mb-3" href="booking_status.html"
                         role="button">Booking Status</a>
                     <a class="btn btn-outline-primary ml-5 mr-3 mt-3 mb-3" href="bookings.html" role="button">My
                         Bookings</a>
                     <a class="btn btn-outline-primary ml-5 mr-3 mt-3 mb-3" href="payment.html" role="button">Payment</a>
-
                 </div>
             </div>
         </div>
+        <form class=" details" novalidate>
+            <div class="form-row">
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom01">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" value="Enter First name" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom02">Last name</label>
+                    <input type="text" class="form-control" id="validationCustom02" value="Enter Last name" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom03">City</label>
+                    <input type="text" class="form-control" id="validationCustom03" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid city.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom04">State</label>
+                    <select class="custom-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>...</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid state.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationCustom05">Zip</label>
+                    <input type="text" class="form-control" id="validationCustom05" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid zip.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                </div>
+            </div>
+        </form>
+        <form class="card book needs-validation register bg-dark col-4 m-auto p-2" id="register">
+            <div class="form-group">
+                <label for="exampleInputUsername" class="font-weight-bolder">Booking ID</label>
+                <input type="text" class="form-control" id="booking" aria-describedby="usernameHelp"
+                    placeholder="Enter ID">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1" class="font-weight-bolder">Event Type</label>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1">Corporate Events</option>
+                    <option value="2">Marriage</option>
+                    <option value="3">Thread Ceremony</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1" class="font-weight-bolder">Event Place</label>
+                <select class="custom-select" id="venue">
+                    <option selected>Choose...</option>
+                    <option value="1">abc ground</option>
+                    <option value="2">xyz ground</option>
+                </select>
+            </div>
+            <!-- <div class="form-group">
+                <label for="exampleInputPassword1" class="font-weight-bolder">Password</label>
+                <input type="password" class="form-control" id="cnfpassword" placeholder="Confirm Password">
+            </div>
+            <button type="submit" class="btn btn-success pl-3 pr-3 w-100">Create</button>
+            <p class="message text-center">Already Registered? <a href="#" id="loginBtn">Login</a></p> -->
+        </form>
 
 </body>
 <script src="user.js"></script>
