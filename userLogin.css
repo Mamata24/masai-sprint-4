@@ -1,0 +1,29 @@
+body{
+    background-image: url("Resources/header2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    }
+
+.form button:hover, .form button:active {
+    background: #43A047;
+}
+
+.form .message a{
+    color: #000000;
+    text-decoration: none;
+}
+.form .register-form{
+    display: none;
+}
+.form .login-form{
+    display:none;
+}
+.show
+{
+display: block !important;
+}
+.form{
+    margin-top: 150px;
+}
